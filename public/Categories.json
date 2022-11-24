@@ -1,0 +1,122 @@
+[
+    {
+        "_id": "1",
+        "brand_name": "Apple",
+        "brand_img": "https://www.digitalconnectmag.com/wp-content/uploads/2016/09/apple-macbook-air-.jpg",
+        "types": [
+            {
+                "img": "https://www.macworld.com/wp-content/uploads/2022/03/macbook-air-2020-3.jpg?quality=50&strip=all",
+                "name": "MacBook Air",
+                "ram": "8GB",
+                "processor": "3.2 GHz 8-core",
+                "location": "Dhaka",
+                "original_price": "1200",
+                "resale_price": "800",
+                "uses": "1",
+                "post_date": "12 November 2022"
+            },
+            {
+                "img": "https://cdn.mos.cms.futurecdn.net/GfinEMFXnT42BFxAcDc2rA.jpg",
+                "name": "MacBook Pro (13-inch)",
+                "ram": "8GB",
+                "processor": "3.5 GHz 8-core",
+                "location": "Chattogram",
+                "original_price": "1400",
+                "resale_price": "1000",
+                "uses": "2",
+                "post_date": "15 November 2022"
+            },
+            {
+                "img": "https://9to5mac.com/wp-content/uploads/sites/6/2019/12/MacBook-Pro-Review-9to5Mac.jpg?quality=82&strip=all",
+                "name": "MacBook Pro (16-inch)",
+                "ram": "16GB",
+                "processor": "3.2 GHz 10-core",
+                "location": "Rangpur",
+                "original_price": "2000",
+                "resale_price": "1600",
+                "uses": "1",
+                "post_date": "18 November 2022"
+            }
+        ]
+    },
+    {
+        "_id": "2",
+        "brand_name": "HP",
+        "brand_img": "https://aroz.com.bd/wp-content/uploads/2022/01/2126-1425-712823-121121065115859.jpg",
+        "types": [
+            {
+                "img": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/HP_Pavilion_Plus_14_inch_Laptop_PC_image_10.jpg",
+                "name": "HP Pavilion Plus 14",
+                "ram": "8GB",
+                "processor": "3.2 GHz 8-core",
+                "location": "Dhaka",
+                "original_price": "999",
+                "resale_price": "799",
+                "uses": "1",
+                "post_date": "18 November 2022"
+            },
+            {
+                "img": "https://www.skyland.com.bd/wp-content/uploads/HP-Victus-15-FA0031DX-1.jpg",
+                "name": "HP Victus 15",
+                "ram": "16GB",
+                "processor": "3.2 GHz 10-core",
+                "location": "Chattogram",
+                "original_price": "1220",
+                "resale_price": "900",
+                "uses": "2",
+                "post_date": "15 November 2022"
+            },
+            {
+                "img": "https://laptopmedia.com/wp-content/uploads/2022/04/hpomen1616-b0000featured.jpg",
+                "name": "HP Omen 16 ",
+                "ram": "16GB",
+                "processor": "3.2 GHz 10-core",
+                "location": "Rangpur",
+                "original_price": "1200",
+                "resale_price": "1000",
+                "uses": "1",
+                "post_date": "20 November 2022"
+            }
+        ]
+    },
+    {
+        "_id": "3",
+        "brand_name": "Dell",
+        "brand_img": "https://blogs.windows.com/wp-content/uploads/prod/sites/2/2016/09/Dell-Sept-14.jpg",
+        "types": [
+            {
+                "img": "https://cdn.mos.cms.futurecdn.net/WA9EsRhiyzmjHgpJYsu8rb.jpg",
+                "name": "Dell Alienware x17 R2",
+                "ram": "16GB",
+                "processor": "3.2 GHz 8-core",
+                "location": "Dhaka",
+                "original_price": "1200",
+                "resale_price": "1099",
+                "uses": "1",
+                "post_date": "17 November 2022"
+            },
+            {
+                "img": "https://sm.pcmag.com/t/pcmag_au/review/d/dell-inspi/dell-inspiron-15-3000-3511_u7an.1920.jpg",
+                "name": "Dell Inspiron 15 3511",
+                "ram": "8GB",
+                "processor": "3.2 GHz 10-core",
+                "location": "Chattogram",
+                "original_price": "1400",
+                "resale_price": "1250",
+                "uses": "2",
+                "post_date": "15 November 2022"
+            },
+            {
+                "img": "https://cdn.hiconsumption.com/wp-content/uploads/2022/02/Alienware-X14-Gaming-Laptop-0-Hero.jpg",
+                "name": "Dell Alienware x14",
+                "ram": "16GB",
+                "processor": "3.2 GHz 8-core",
+                "location": "Rangpur",
+                "original_price": "15000",
+                "resale_price": "1300",
+                "uses": "2",
+                "post_date": "18 November 2022"
+            }
+        ]
+    }
+]
