@@ -1,17 +1,17 @@
-// import './App.css';
-// import { RouterProvider } from 'react-router-dom';
-// import router from './Router/Routes/Router';
+import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import router from './Router/Routes/Router';
 
 
-// function App() {
+function App() {
 
-//   return (
-//     <div className='max-w-screen-xl mx-auto'>
-//       <RouterProvider router={router}>
+  return (
+    <div className='max-w-screen-xl mx-auto'>
+      <RouterProvider router={router}>
 
-//       </RouterProvider>
-//     </div>
-//   );
-// }
+      </RouterProvider>
+    </div>
+  );
+}
 
-// export default App;
+export default App;
