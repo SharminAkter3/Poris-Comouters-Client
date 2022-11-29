@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import ProductCard from './ProductCard';
+import ProductCard from './productCard';
 import ProductModal from './ProductModal';
 
 const Category = () => {
     const products = useLoaderData();
-    const [booking, setBooking] = useState(null)
+    const [booking, setBooking] = useState({})
     // console.log(booking)
     // console.log(products)
     return (

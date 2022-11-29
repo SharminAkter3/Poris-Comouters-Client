@@ -46,18 +46,19 @@ const AddProduct = () => {
         const resale_price = form.resale_price.value;
         const original_price = form.original_price.value;
         const condition = form.condition.value;
-        // const seller_email = form.seller_email.value;
+        const seller_email = form.seller_email.value;
         const seller_phone = form.seller_phone.value;
         const location = form.location.value;
         const uses = form.uses.value;
         const seller_name = form.seller_name.value;
         const description = form.description.value;
-        console.log(name, seller_name, productImage, resale_price, original_price, condition, seller_phone, location, uses, description);
+        // console.log(name, seller_name, seller_email, productImage, resale_price, original_price, condition, seller_phone, location, uses, description);
 
         const productInfo = {
             name,
             category_id,
             seller_name,
+            seller_email,
             resale_price: resale_price,
             original_price: original_price,
             img: productImage,
@@ -70,6 +71,8 @@ const AddProduct = () => {
             sellStatus: false,
             postedOn: new Date()
         };
+        console.log(productInfo)
+
 
         fetch('http://localhost:5000/products', {
             method: 'POST',
@@ -82,7 +85,7 @@ const AddProduct = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    toast.success("Product add Successfully");
+                    toast.success("Product added Successfully");
                 }
             })
     }
@@ -159,6 +162,12 @@ const AddProduct = () => {
                                     <span className="label-text">Seller Name</span>
                                 </label>
                                 <input name='seller_name' type="text" placeholder="Seller Name" defaultValue={user?.displayName} className="input input-bordered w-full" />
+                            </div>
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">Seller Email</span>
+                                </label>
+                                <input name='seller_email' type="text" placeholder="Seller Email" defaultValue={user?.email} className="input input-bordered w-full" />
                             </div>
                             <div className="form-control w-full">
                                 <label className="label">

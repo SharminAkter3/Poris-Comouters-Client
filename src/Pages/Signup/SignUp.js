@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { FaGoogle } from 'react-icons/fa';
+// import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from 'firebase/auth';
@@ -158,7 +158,7 @@ const SignUp = () => {
                 </form>
                 <p className='mt-3'>Already have an account<Link className='text-blue-700' to='/login'> please login</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleRegister} className='btn btn-outline btn-primary w-full'><FaGoogle className='mr-2 text-xl'></FaGoogle> Register With Google</button>
+                <button onClick={handleGoogleRegister} className='btn btn-outline btn-primary w-full'> Register With Google</button>
             </div>
         </div>
     );

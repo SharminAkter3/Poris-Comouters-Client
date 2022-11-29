@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { async } from '@firebase/util';
 import toast from 'react-hot-toast';
 import ConfirmationModal from '../../Shared/ConfirmationModal/ConfirmationModal';
 
@@ -23,7 +24,6 @@ const AllBuyers = () => {
             return data;
         }
     })
-
 
     const handleMakeAdmin = id => {
         fetch(`http://localhost:5000/buyers/admin/${id}`, {
@@ -80,7 +80,6 @@ const AllBuyers = () => {
                     title={`Are you sure you want to delete?`}
                     message={`If you delete ${deletingBuyer.name}`}
                     successAction={handleDeleteBuyer}
-                    successButtonName="Delete"
                     modalData={deletingBuyer}
                     closeModal={closeModal}
                 >

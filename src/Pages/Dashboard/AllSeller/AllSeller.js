@@ -81,7 +81,7 @@ const AllSellers = () => {
                     title={`Are you sure you want to delete?`}
                     message={`If you delete ${deletingSeller.name}`}
                     successAction={handleDeleteSeller}
-                    successButtonName="Delete"
+
                     modalData={deletingSeller}
                     closeModal={closeModal}
                 ></ConfirmationModal>

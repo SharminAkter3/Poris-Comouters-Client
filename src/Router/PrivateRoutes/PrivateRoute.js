@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+// import { SpinnerCircular } from 'spinners-react/lib/esm/SpinnerCircular';
 import Loading from '../../Pages/Shared/Loading/Loading';
 
 const PrivateRoute = ({ children }) => {
