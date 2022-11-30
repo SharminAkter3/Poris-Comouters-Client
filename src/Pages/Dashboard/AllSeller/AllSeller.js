@@ -23,6 +23,7 @@ const AllSellers = () => {
             const data = await res.json();
             return data;
         }
+
     })
 
 
