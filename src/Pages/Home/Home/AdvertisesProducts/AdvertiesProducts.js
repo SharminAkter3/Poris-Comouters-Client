@@ -6,7 +6,7 @@ const AdvertiesProducts = ({ setBooking }) => {
     const { data: products = [], isLoading } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/advertised_product');
+            const res = await fetch('https://poris-computer-server.vercel.app/advertised_product');
             const data = await res.json();
             console.log(data)
             return data;

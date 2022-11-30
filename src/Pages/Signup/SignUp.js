@@ -49,7 +49,7 @@ const SignUp = () => {
     //save seller to database
     const saveUser = (name, email, role) => {
         const user = { name, email, role };
-        fetch('http://localhost:5000/sellers', {
+        fetch('https://poris-computer-server.vercel.app/sellers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -66,7 +66,7 @@ const SignUp = () => {
     //save seller to database
     const saveUser2 = (name, email, role) => {
         const user = { name, email, role };
-        fetch('http://localhost:5000/buyers', {
+        fetch('https://poris-computer-server.vercel.app/buyers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

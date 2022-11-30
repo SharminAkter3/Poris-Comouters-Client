@@ -16,14 +16,14 @@ const AllBuyers = () => {
     const { data: buyers = [], refetch } = useQuery({
         queryKey: ['buyers'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/buyers');
+            const res = await fetch('https://poris-computer-server.vercel.app/buyers');
             const data = await res.json();
             return data;
         }
     })
 
     const handleMakeAdmin = id => {
-        fetch(`http://localhost:5000/buyers/admin/${id}`, {
+        fetch(`https://poris-computer-server.vercel.app/buyers/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -39,7 +39,7 @@ const AllBuyers = () => {
     };
 
     const handleDeleteBuyer = (buyer) => {
-        fetch(`http://localhost:5000/buyers/${buyer._id}`, {
+        fetch(`https://poris-computer-server.vercel.app/buyers/${buyer._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

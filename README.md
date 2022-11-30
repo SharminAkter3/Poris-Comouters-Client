@@ -8,7 +8,10 @@ https://github.com/programming-hero-web-course-4/b612-used-products-resale-clien
 https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-SharminAkter3
 
 ### My Live Website Link :
+https://poris-computers.web.app/
 
+adminEmail: simran33@gmail.com
+adminPassword : 123456
 
 ### Features
 1. Responsive Navbar

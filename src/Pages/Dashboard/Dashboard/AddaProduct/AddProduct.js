@@ -11,7 +11,7 @@ const AddProduct = () => {
     const { data: categories = [] } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/brands');
+            const res = await fetch('https://poris-computer-server.vercel.app/brands');
             const data = await res.json();
             console.log(data)
             return data;
@@ -19,7 +19,7 @@ const AddProduct = () => {
     })
 
     // useEffect((id) => {
-    //     fetch(`http://localhost:5000/category/${id}`, {
+    //     fetch(`https://poris-computer-server.vercel.app/category/${id}`, {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'
@@ -74,7 +74,7 @@ const AddProduct = () => {
         console.log(productInfo)
 
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://poris-computer-server.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

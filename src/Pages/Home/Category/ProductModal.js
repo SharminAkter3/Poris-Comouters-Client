@@ -30,7 +30,7 @@ const ProductModal = ({ booking, setBooking }) => {
 
         // console.log(booked)
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://poris-computer-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

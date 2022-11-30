@@ -9,7 +9,7 @@ const MyProduct = () => {
     const { data: products = [], refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/products?email=${user?.email}`);
+            const res = await fetch(`https://poris-computer-server.vercel.app/products?email=${user?.email}`);
             const data = await res.json();
             console.log(data)
             return data;
@@ -18,7 +18,7 @@ const MyProduct = () => {
 
     const handleAdvertised = (_id) => {
 
-        fetch(`http://localhost:5000/advertise/product/${_id}`, {
+        fetch(`https://poris-computer-server.vercel.app/advertise/product/${_id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem("accessToken")}`
