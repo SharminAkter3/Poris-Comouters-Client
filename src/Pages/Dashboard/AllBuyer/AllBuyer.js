@@ -12,9 +12,6 @@ const AllBuyers = () => {
         setDeletingBuyer(null)
     }
 
-    const handleDeleteBuyer = (buyer) => {
-        console.log(buyer)
-    }
 
     const { data: buyers = [], refetch } = useQuery({
         queryKey: ['buyers'],
@@ -39,7 +36,23 @@ const AllBuyers = () => {
                     refetch();
                 }
             })
-    }
+    };
+
+    const handleDeleteBuyer = (buyer) => {
+        fetch(`http://localhost:5000/buyers/${buyer._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`Buyer ${buyer.name} deleted successfully`)
+                }
+            })
+    };
 
 
     return (
@@ -80,6 +93,7 @@ const AllBuyers = () => {
                     title={`Are you sure you want to delete?`}
                     message={`If you delete ${deletingBuyer.name}`}
                     successAction={handleDeleteBuyer}
+                    successButtonName="Delete"
                     modalData={deletingBuyer}
                     closeModal={closeModal}
                 >

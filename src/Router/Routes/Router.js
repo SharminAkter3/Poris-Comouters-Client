@@ -11,6 +11,7 @@ import Payment from '../../Pages/Dashboard/Dashboard/Payment/Payment';
 import MyOrders from '../../Pages/Dashboard/MyOrders/MyOrders';
 import Category from '../../Pages/Home/Category/Category';
 import ProductCard from '../../Pages/Home/Category/productCard';
+import AdvertiesProducts from '../../Pages/Home/Home/AdvertisesProducts/AdvertiesProducts';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login';
 import SignUp from '../../Pages/Signup/SignUp';
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: '/productcard',
                 element: <ProductCard></ProductCard>
+            },
+            {
+                path: '/advertise',
+                element: <AdvertiesProducts></AdvertiesProducts>
             },
             // {
             //     path: '/*',
