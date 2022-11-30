@@ -8,12 +8,14 @@ import AddProduct from '../../Pages/Dashboard/Dashboard/AddaProduct/AddProduct';
 import Dashboard from '../../Pages/Dashboard/Dashboard/Dashboard';
 import MyProduct from '../../Pages/Dashboard/Dashboard/MyProduct/MyProduct';
 import Payment from '../../Pages/Dashboard/Dashboard/Payment/Payment';
+import ReportedItems from '../../Pages/Dashboard/Dashboard/ReportedItems/ReportedItems';
 import MyOrders from '../../Pages/Dashboard/MyOrders/MyOrders';
 import Category from '../../Pages/Home/Category/Category';
 import ProductCard from '../../Pages/Home/Category/productCard';
 import AdvertiesProducts from '../../Pages/Home/Home/AdvertisesProducts/AdvertiesProducts';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login';
+import ErrorPage from '../../Pages/Shared/ErrorPage/ErrorPage';
 import SignUp from '../../Pages/Signup/SignUp';
 import PrivateRoute from '../PrivateRoutes/PrivateRoute';
 
@@ -46,10 +48,10 @@ const router = createBrowserRouter([
                 path: '/advertise',
                 element: <AdvertiesProducts></AdvertiesProducts>
             },
-            // {
-            //     path: '/*',
-            //     element: <Error
-            // },
+            {
+                path: '/*',
+                element: <ErrorPage></ErrorPage>
+            },
             {
                 path: '/category/:id',
                 element: <PrivateRoute><Category></Category></PrivateRoute>,
@@ -78,6 +80,10 @@ const router = createBrowserRouter([
                 element: <AllSeller></AllSeller>
             },
             {
+                path: '/dashboard/reportedItems',
+                element: <ReportedItems></ReportedItems>
+            },
+            {
                 path: '/dashboard/addproduct',
                 element: <AddProduct></AddProduct>
             },
@@ -85,11 +91,14 @@ const router = createBrowserRouter([
                 path: '/dashboard/myproduct',
                 element: <MyProduct></MyProduct>
             },
-
             {
                 path: '/dashboard/payment/:id',
                 element: <Payment></Payment>,
                 loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+            },
+            {
+                path: '/dashboard/*',
+                element: <ErrorPage></ErrorPage>
             },
         ]
     },
