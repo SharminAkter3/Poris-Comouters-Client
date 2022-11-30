@@ -12,10 +12,6 @@ const AllSellers = () => {
         setDeletingSeller(null)
     }
 
-    const handleDeleteSeller = (seller) => {
-        console.log(seller)
-    }
-
     const { data: sellers = [], refetch } = useQuery({
         queryKey: ['sellers'],
         queryFn: async () => {
@@ -23,8 +19,24 @@ const AllSellers = () => {
             const data = await res.json();
             return data;
         }
+    });
 
-    })
+    const handleDeleteSeller = (seller) => {
+        fetch(`http://localhost:5000/sellers/${seller._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`Seller ${seller.name} deleted successfully`)
+                }
+            })
+    };
+
 
 
     // const handleMakeAdmin = id => {

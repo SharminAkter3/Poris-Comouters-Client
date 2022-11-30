@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import CategoriesCard from './CategoriesCard';
+import Loading from '../../../Shared/Loading/Loading';
 
 const Categories = () => {
-    const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        fetch('categories.json')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                setCategories(data)
-            })
-    }, [])
+
+    const { data: categories = [], isLoading } = useQuery({
+        queryKey: ['categories'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/brands');
+            const data = await res.json();
+            return data;
+        }
+    })
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div>
@@ -19,9 +25,9 @@ const Categories = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-10' >
                 {
-                    categories.map(category => <CategoriesCard
-                        key={category._id}
-                        category={category}
+                    categories.map(categori => <CategoriesCard
+                        key={categori._id}
+                        categori={categori}
                     ></CategoriesCard>)
                 }
             </div>
