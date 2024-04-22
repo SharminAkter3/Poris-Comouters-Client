@@ -1,13 +1,13 @@
 ## My Project Name:
 Pori's Computers
 
-### My Project Client Side Link :
-https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-SharminAkter3
+### Client Side Code :
+https://github.com/SharminAkter3/Poris-Comouters-Client
 
-### My Project Sever Side Link:
-https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-SharminAkter3
+### Sever Side Code:
+https://github.com/SharminAkter3/Poris-Computers-Server
 
-### My Live Website Link :
+### Live Website Link :
 https://poris-computers.web.app/
 
 adminEmail: simran33@gmail.com
